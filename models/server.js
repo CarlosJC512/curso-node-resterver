@@ -1,5 +1,8 @@
 const express = require('express');
 const cors = require('cors');
+const { dbconnection } = require('../db/config');
+
+require('colors');
 
 
 class Server {
@@ -9,13 +12,20 @@ class Server {
         this.port = process.env.PORT;
         this.usersPath = '/api/users';
 
+        // Conectar a base de datos
+        this.conectarDB();
+
         // Middelwares
         this.middlewares();
 
         // Rutas de mi aplicación
         this.routes();
     }
-
+    
+    async conectarDB() {
+        await dbconnection();
+    }
+    
     middlewares() {
 
         // Cors
@@ -28,6 +38,7 @@ class Server {
         this.app.use( express.static('public') );
     }
 
+
     routes() {
 
        this.app.use(this.usersPath, require('../routes/user'));
@@ -36,7 +47,7 @@ class Server {
 
     listen() {
         this.app.listen(this.port, () => {
-            console.log(`Servidor corriendo en http://localhost:${this.port}`);
+            console.log(`Servidor corriendo en http://localhost:${this.port}`.green.bold);
         });
     }
 }
