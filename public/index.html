@@ -46,18 +46,15 @@
 
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
+        
         function handleCredentialResponse(response) {
 
             const body = { id_token: response.credential };
 
             console.log(body);
 
-            let url = ( window.location.hostname.includes('localhost')) 
-            ? 'http://localhost:8080/api/auth/google'
-            : 'https://dashboard.heroku.com/apps/webserve-nodejs-express/api/auth/google';
-
             // Google Token: ID_TOKEN
-            fetch(url , {
+            fetch('https://dashboard.heroku.com/apps/webserve-nodejs-express/api/auth/google' , {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
