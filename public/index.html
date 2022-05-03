@@ -16,26 +16,33 @@
     </header>
 
     <div class="body">
+        <div class="container">
 
-        <div id="g_id_onload" 
-            data-client_id="600008870490-53behko7r40gm23vgju08en4lpsccthn.apps.googleusercontent.com"
-            data-auto_prompt="false" 
-            data-callback="handleCredentialResponse">
+            <div id="g_id_onload" 
+                data-client_id="600008870490-53behko7r40gm23vgju08en4lpsccthn.apps.googleusercontent.com"
+                data-auto_prompt="false" 
+                data-callback="handleCredentialResponse">
+            </div>
+    
+            <div class="g_id_signin" 
+                data-type="standard" 
+                data-size="large" 
+                data-theme="outline" 
+                data-text="sign_in_with"
+                data-shape="rectangular" 
+                data-logo_alignment="left">
+            </div>
+    
+
         </div>
 
-        <div class="g_id_signin" 
-            data-type="standard" 
-            data-size="large" 
-            data-theme="outline" 
-            data-text="sign_in_with"
-            data-shape="rectangular" 
-            data-logo_alignment="left">
-        </div>
-
-        <button id="google_signout">
-            SignOut
-        </button>
     </div>
+
+    <footer>
+            <button id="google_signout">
+                SignOut
+            </button>
+    </footer>
 
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>

@@ -7,16 +7,17 @@
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     position: sticky;
     top: 0px;
     background-color: black;
+    padding: 20px
 }
 
 header h1 {
@@ -25,4 +26,58 @@ header h1 {
     color: white;
     text-align: center;
     text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+.body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: darkgray;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    padding: 20px;
+}
+
+#google_signout {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ padding: 15px 38px;
+ border-radius: 16px;
+ border: 1px solid transparent;
+ color: #FFFFFF;
+ background-color: #1DC9A0;
+ font-size: 16px;
+ letter-spacing: 1px;
+ transition: all 0.15s linear;
+}
+
+#google_signout:hover {
+ background-color: rgba(29, 201, 160, 0.08);
+ border-color: #1DC9A0;
+ color: #1DC9A0;
+ transform: translateY(-5px) scale(1.05);
+}
+
+#google_signout:active {
+ background-color: transparent;
+ border-color: #1DC9A0;
+ color: #1DC9A0;
+ transform: translateY(5px) scale(0.95);
+}
+
+#google_signout:disabled {
+ background-color: rgba(255, 255, 255, 0.16);
+ color: #8E8E93;
+ border-color: #8E8E93;
 }
