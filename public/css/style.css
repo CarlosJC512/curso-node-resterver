@@ -1,0 +1,28 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+}
+
+header h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}

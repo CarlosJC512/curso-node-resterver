@@ -5,6 +5,7 @@ const RoleSchema = Schema({
     role: {
         type: String,
         required: [true, 'El rol es requerido'],
+        default: 'USER_ROLE'
     }
 });
 
